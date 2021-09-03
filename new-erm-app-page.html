@@ -1,6 +1,6 @@
 <!--
  * @Date: 2021-09-03 09:50:22
- * @LastEditTime: 2021-09-03 10:29:02
+ * @LastEditTime: 2021-09-03 10:39:06
  * @Author: WangYongJie
  * @Work-email: wangyongjie2@gome.com.cn
  * @Private-email: admin@xiaodongxier.com
@@ -13,7 +13,7 @@
     setTimeout(function () {
         //   模块名称
         var wyj_temp = $("#wrapper [id^=t]");
-        if (window.location.search.indexOf("wangyongjie") > -1) {
+        // if (window.location.search.indexOf("wangyongjie") > -1) {
             for (var j = 0; j < wyj_temp.length; j++) {
                 var wyj_temp_name = wyj_temp.eq(j).attr("templetcode");
                 switch (wyj_temp_name) {
@@ -50,7 +50,7 @@
                 }
                 wyj_temp.eq(j).parent("div").attr("data-title",)
             }
-        }
+        // }
         //   格式化输出数据
         var xdx_data = JSON.parse(JSON.stringify(window.cmsObj));
         // console.clear()
