@@ -1,0 +1,82 @@
+<!--
+ * @Date: 2021-09-03 09:50:22
+ * @LastEditTime: 2021-09-03 10:19:24
+ * @Author: WangYongJie
+ * @Work-email: wangyongjie2@gome.com.cn
+ * @Private-email: admin@xiaodongxier.com
+-->
+<style>
+    
+</style>
+<div class="new-erm-app-page"></div>
+<script>
+    setTimeout(function () {
+        //   模块名称
+        var wyj_temp = $("#wrapper [id^=t]");
+        if (window.location.search.indexOf("wangyongjie") > -1) {
+            for (var j = 0; j < wyj_temp.length; j++) {
+                var wyj_temp_name = wyj_temp.eq(j).attr("templetcode");
+                switch (wyj_temp_name) {
+                    case "img1Templet":
+                        wyj_temp.eq(j).parent("div").attr("data-title", "单图模块")
+                        break;
+                    case "titleTemplet":
+                        wyj_temp.eq(j).parent("div").attr("data-title", "标题模块")
+                        break;
+                    case "labelHTemplet":
+                        wyj_temp.eq(j).parent("div").attr("data-title", "定位标签")
+                        break;
+                    case "polylineTemplet":
+                        wyj_temp.eq(j).parent("div").attr("data-title", "折线商品")
+                        break;
+                    case "goods1Templet":
+                        wyj_temp.eq(j).parent("div").attr("data-title", "单列商品")
+                        break;
+                    case "goodsTemplet":
+                        wyj_temp.eq(j).parent("div").attr("data-title", "多列商品2或者3")
+                        break;
+                    case "gcGoodsTemplet":
+                        wyj_temp.eq(j).parent("div").attr("data-title", "真快乐币商品")
+                        break;
+                    case "carouselCouponTemplet":
+                        wyj_temp.eq(j).parent("div").attr("data-title", "优惠券模块")
+                        break;
+                    case "customTemplet":
+                        wyj_temp.eq(j).parent("div").attr("data-title", "自定义模块")
+                        break;
+                    default:
+                        wyj_temp.eq(j).parent("div").attr("data-title", "⚠️未收录⚠️")
+                        break;
+                }
+                wyj_temp.eq(j).parent("div").attr("data-title",)
+            }
+        }
+        //   格式化输出数据
+        var xdx_data = JSON.parse(JSON.stringify(window.cmsObj));
+        // console.clear()
+        console.log(xdx_data)
+        console.log("new", JSON.parse(JSON.stringify(window.cmsPageData.cmsObj)))
+    }, 1000)
+
+    console.log('%c 新版erm移动端展示页面', 'color:#000;font-size:20px;font-weight:900;background:#5dbb80');
+</script>
+
+
+
+<!-- 
+
+// ==UserScript==
+// @name        新版erm-新版erm移动端展示页面
+// @author      wangyongjie
+// @namespace   xiaodongxier.com
+// @match       http://gcms.ds.gome.com.cn/h5/main.html
+// @match       http://gcms.ds.gome.com.cn/h5/main.html/*
+// @grant       none
+// @version     1.0
+// @description 2021/8/2 下午7:06:32
+// ==/UserScript==
+$("body").append($("<div id='wangyongjie'></div>"))
+// $("#wangyongjie").load("https://github.xiaodongxier.com/PlugIn/new-erm-app-page.html")
+$("#wangyongjie").load("https://cdn.jsdelivr.net/gh/xiaodongxier/PlugIn@main/new-erm-app-page.html")
+
+ -->
