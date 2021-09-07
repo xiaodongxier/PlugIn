@@ -1,6 +1,6 @@
 <!--
  * @Date: 2021-09-03 09:50:22
- * @LastEditTime: 2021-09-07 10:25:12
+ * @LastEditTime: 2021-09-07 10:28:33
  * @Author: WangYongJie
  * @Work-email: wangyongjie2@gome.com.cn
  * @Private-email: admin@xiaodongxier.com
@@ -68,9 +68,10 @@
     })
     setTimeout(function(){
         $('#wrapper').prepend('<div id="templet666" class="custom-ued businessType0 cms" templetid="88888888"><div class="tiaoshi"></div></div>')
+        console.log('%c 调试窗口插入成功', 'color:#000;font-size:20px;font-weight:900;background:#5dbb80');
         $(".cms").click(function() {
             $(".zdy_wrap").toggle()
-            console.log("调试窗口显示/隐藏")
+            console.log('%c 调试窗口显示/隐藏', 'color:#000;font-size:20px;font-weight:900;background:#5dbb80');
         })
     },1000)
 
@@ -85,6 +86,7 @@
 // @name        旧版erm-旧版erm预览页插入代码调试
 // @author      wangyongjie
 // @namespace   xiaodongxier.com
+// @require     https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js
 // @match       *://prom.m.gome.com.cn/html/prodhtml/topics/*
 // @match       *://cms.ds.gome.com.cn/gome-mobile-web/preview_page/*
 // @grant       none
