@@ -1,0 +1,99 @@
+<!--
+ * @Date: 2021-09-03 09:50:22
+ * @LastEditTime: 2021-09-07 10:07:01
+ * @Author: WangYongJie
+ * @Work-email: wangyongjie2@gome.com.cn
+ * @Private-email: admin@xiaodongxier.com
+-->
+<style>
+    #float-ball-box {
+        display: none !important
+    }
+
+    .zdy_wrap {
+        position: fixed;
+        bottom: 50%;
+        right: -0.1rem;
+        width: 1.5rem;
+        height: 2rem;
+        display: flex;
+        overflow: hidden;
+        z-index: 99999999999999999;
+        transition: .6s;
+    }
+
+    .zdy_wrap.hide_right {
+        right: -1.1rem;
+    }
+
+    .zdy_wrap button {
+        display: block;
+        width: .4rem;
+        height: .66rem;
+        border-radius: .4rem 0 0 .4rem;
+        font-size: .4rem;
+        background: rgb(0 0 0 / .8);
+        color: #fff;
+    }
+
+    .zdy_wrap textarea {
+        width: 1rem;
+        height: 2rem;
+        border: 1px solid #000;
+    }
+
+    #download-app-nav {
+        display: block;
+    }
+</style>
+<div class="new-erm-app-page">
+    <div class="zdy_wrap hide_right">
+        <div class="zdy_right">
+            <button class="btn_open">😁</button>
+            <button class="llq_btn_no">😭</button>
+            <button class="btn_hide">👋</button>
+        </div>
+        <textarea name="" id="btn_con" cols="30" rows="10"></textarea>
+    </div>
+</div>
+<script>
+    $("body").append(zdy_js_wrap)
+    $('#wrapper').prepend('<div class="tiaoshi"></div>')
+    $(".btn_open").click(function() {
+        $(".tiaoshi").html($("#btn_con").val())
+    })
+    $(".llq_btn_no").click(function() {
+        $("#btn_con").val('')
+    })
+    $(".btn_hide").click(function() {
+        $(".zdy_wrap").toggleClass("hide_right")
+    })
+    setTimeout(function() {
+        $(".cms").click(function() {
+            $(".zdy_wrap").toggle()
+            console.log("1")
+        })
+    }, 1000)
+
+    console.log('%c 新版erm预览页插入代码调试', 'color:#000;font-size:20px;font-weight:900;background:#5dbb80');
+</script>
+
+
+
+<!-- 
+
+// ==UserScript==
+// @name        旧版erm-旧版erm预览页插入代码调试
+// @author      wangyongjie
+// @namespace   xiaodongxier.com
+// @match       *://prom.m.gome.com.cn/html/prodhtml/topics/*
+// @match       *://cms.ds.gome.com.cn/gome-mobile-web/preview_page/*
+// @grant       none
+// @version     1.0
+// @description 2021/9/2 下午7:06:32
+// ==/UserScript==
+$("body").append($("<div id='new-erm-app-page'></div>"))
+$("#new-erm-app-page").load("https://github.xiaodongxier.com/PlugIn/new-erm-app-page.html")
+// $("#new-erm-app-page").load("https://cdn.jsdelivr.net/gh/xiaodongxier/PlugIn@main/new-erm-app-page.html")
+
+ -->
