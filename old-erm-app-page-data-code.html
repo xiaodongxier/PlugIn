@@ -1,6 +1,6 @@
 <!--
  * @Date: 2021-09-03 09:50:22
- * @LastEditTime: 2021-09-07 10:40:13
+ * @LastEditTime: 2021-09-07 10:42:53
  * @Author: WangYongJie
  * @Work-email: wangyongjie2@gome.com.cn
  * @Private-email: admin@xiaodongxier.com
@@ -36,11 +36,14 @@
         document.body.appendChild(link);
         link.click();
     }
-    $(".ellipsis").click(function() {
-        zdy_ued()
-        alert(mytit + "页面监测数据导出成功&杰哥牛逼🐂" + new Date().toLocaleString())
-        console.log('%c 导出成功', 'color:#000;font-size:20px;font-weight:900;background:#6a1e9e');
-    })
+    setTimeout(function(){
+        $(".ellipsis").click(function() {
+            zdy_ued()
+            alert(mytit + "页面监测数据导出成功&杰哥牛逼🐂" + new Date().toLocaleString())
+            console.log('%c 导出成功', 'color:#000;font-size:20px;font-weight:900;background:#6a1e9e');
+        })
+    },1000)
+
     // console.log('%c 旧版erm批量导出code值', 'color:#000;font-size:20px;font-weight:900;background:#5dbb80');
     console.log('%c 旧版erm批量导出code值', 'color:#000;font-size:20px;font-weight:900;background:#6a1e9e');
 </script>
