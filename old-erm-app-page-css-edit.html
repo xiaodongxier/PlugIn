@@ -1,6 +1,6 @@
 <!--
  * @Date: 2021-09-03 09:50:22
- * @LastEditTime: 2021-09-07 10:15:49
+ * @LastEditTime: 2021-09-07 10:25:12
  * @Author: WangYongJie
  * @Work-email: wangyongjie2@gome.com.cn
  * @Private-email: admin@xiaodongxier.com
@@ -57,7 +57,6 @@
     </div>
 </div>
 <script>
-    $('#wrapper').prepend('<div id="templet666" class="custom-ued businessType0 cms" templetid="88888888"><div class="tiaoshi"></div></div>')
     $(".btn_open").click(function() {
         $(".tiaoshi").html($("#btn_con").val())
     })
@@ -67,12 +66,13 @@
     $(".btn_hide").click(function() {
         $(".zdy_wrap").toggleClass("hide_right")
     })
-    setTimeout(function() {
+    setTimeout(function(){
+        $('#wrapper').prepend('<div id="templet666" class="custom-ued businessType0 cms" templetid="88888888"><div class="tiaoshi"></div></div>')
         $(".cms").click(function() {
             $(".zdy_wrap").toggle()
-            console.log("1")
+            console.log("调试窗口显示/隐藏")
         })
-    }, 1000)
+    },1000)
 
     console.log('%c 旧版erm预览页插入代码调试', 'color:#000;font-size:20px;font-weight:900;background:#5dbb80');
 </script>
