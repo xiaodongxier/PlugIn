@@ -1,0 +1,117 @@
+<!--
+ * @Date: 2021-09-13 11:08:15
+ * @LastEditTime: 2021-09-13 11:08:16
+ * @Author: WangYongJie
+ * @Work-email: wangyongjie2@gome.com.cn
+ * @Private-email: admin@xiaodongxier.com
+-->
+<!--
+ * @Date: 2021-09-13 10:32:08
+ * @LastEditTime: 2021-09-13 11:07:09
+ * @Author: WangYongJie
+ * @Work-email: wangyongjie2@gome.com.cn
+ * @Private-email: admin@xiaodongxier.com
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+<!--
+ * @Date: 2021-09-13 10:32:08
+ * @LastEditTime: 2021-09-13 10:56:47
+ * @Author: WangYongJie
+ * @Work-email: wangyongjie2@gome.com.cn
+ * @Private-email: admin@xiaodongxier.com
+-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<style>
+    /* css */
+    .new-erm-app-css-edit {
+        position: fixed;
+        right: 0;
+    }
+
+    .new-erm-app-css-edit input {
+        display: block;
+        width: 50px;
+    }
+</style>
+<div class="new-erm-app-css-edit">
+    <!-- html -->
+    <input type="number" name="" id="" value="1">
+    <input type="text" name="" id="" value="1" v-model="mycode">
+    <div>{{mycode}}</div>
+</div>
+<script>
+    // js
+    var zdy_wrap = $("#app #wrapper");
+    var zdy_item = `
+                    <div templetcode="customTemplet" data-title="调试css">
+                        <div id="t0000" idx="0000" templetcode="customTemplet" rowid="88888" templetid="60" pageid="0" class="tem-box customTemplet cms-tem-box">
+                            <div class="cms-tem">
+                                <div>
+                                    <div class="my-css-edit" id="my-css-edit">
+                                        <!-- mycode -->
+                                    </div>
+                                    <div id="custom-id"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+    zdy_wrap.prepend(zdy_item)
+
+    new Vue({
+        el: ".new-erm-app-css-edit",
+        data: {
+            mycode:""
+        }
+
+    })
+
+    console.log('%c 新版erm-调试窗口显示/隐藏', 'color:#000;font-size:20px;font-weight:900;background:#5d9df8');
+</script>
+
+
+
+<!-- 
+// ==UserScript==
+// @name        新版erm-调试窗口显示/隐藏
+// @author      wangyongjie
+// @namespace   xiaodongxier.com
+// @require     https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js
+// @match       https://prom.m.gome.com.cn/gcms/MobsaleJieCSdown.html
+// @match       https://prom.m.gome.com.cn/gcms/MobsaleJieCSdown.html/*
+// @grant       none
+// @version     1.0
+// @description 2021/9/13 上午12:06:32
+// ==/UserScript==
+$("body").append($("<div id='new-erm-app-css-edit'></div>"))
+$("#new-erm-app-css-edit").load("https://github.xiaodongxier.com/PlugIn/new-erm-app-css-edit.html")
+// $("#new-erm-app-css-edit").load("https://cdn.jsdelivr.net/gh/xiaodongxier/PlugIn@main/new-erm-app-css-edit.html")
+
+ -->
+
+
+
+
+
+
+
+ 
+</body>
+</html>

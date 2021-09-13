@@ -1,60 +1,99 @@
 <!--
- * @Date: 2021-09-13 10:32:08
- * @LastEditTime: 2021-09-13 10:47:40
+ * @Date: 2021-09-03 09:50:22
+ * @LastEditTime: 2021-09-13 11:41:55
  * @Author: WangYongJie
  * @Work-email: wangyongjie2@gome.com.cn
  * @Private-email: admin@xiaodongxier.com
 -->
 <style>
-    /* css */
-</style>
-<div class="new-erm-app-css-edit">
-    <!-- html -->
+    #float-ball-box {
+        display: none !important
+    }
 
+    .zdy_wrap {
+        position: fixed;
+        bottom: 50%;
+        right: -0.1rem;
+        width: 1.5rem;
+        height: 2rem;
+        display: flex;
+        overflow: hidden;
+        z-index: 99999999999999999;
+        transition: .6s;
+    }
+
+    .zdy_wrap.hide_right {
+        right: -1.1rem;
+    }
+
+    .zdy_wrap button {
+        display: block;
+        width: .4rem;
+        height: .66rem;
+        border-radius: .4rem 0 0 .4rem;
+        font-size: .4rem;
+        background: rgb(0 0 0 / .8);
+        color: #fff;
+    }
+
+    .zdy_wrap textarea {
+        width: 1rem;
+        height: 2rem;
+        border: 1px solid #000;
+    }
+
+    #download-app-nav {
+        display: block;
+    }
+</style>
+<div class="new-erm-app-page-css-edit">
+    <div class="zdy_wrap hide_right">
+        <div class="zdy_right">
+            <button class="btn_open">😁</button>
+            <button class="llq_btn_no">😭</button>
+            <button class="btn_hide">👋</button>
+        </div>
+        <textarea name="" id="btn_con" cols="30" rows="10"></textarea>
+    </div>
 </div>
 <script>
-    // js
-    var zdy_wrap = $("#app #wrapper");
-    var zdy_item = `
-                    <div templetcode="customTemplet" data-title="调试css">
-                    <div id="t0000" idx="0000" templetcode="customTemplet" rowid="88888" templetid="60" pageid="0" class="tem-box customTemplet cms-tem-box">
-                        <div class="cms-tem">
-                            <div>
-                                <div class="my-css-edit" id="my-css-edit">
-                                    <!-- mycode -->
-                                </div>
-                                <div id="custom-id"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>`;
-    zdy_wrap.prepend(zdy_item)
-    
-    
+    $(".btn_open").click(function() {
+        $(".tiaoshi").html($("#btn_con").val())
+    })
+    $(".llq_btn_no").click(function() {
+        $("#btn_con").val('')
+    })
+    $(".btn_hide").click(function() {
+        $(".zdy_wrap").toggleClass("hide_right")
+    })
+    setTimeout(function(){
+        $('#app #wrapper').prepend('<div id="templet666" class="custom-ued businessType0 cms" templetid="88888888"><div class="tiaoshi"></div></div>')
+        console.log('%c 调试窗口插入成功', 'color:#000;font-size:20px;font-weight:900;background:#5dbb80');
+        $(".cms").click(function() {
+            $(".zdy_wrap").toggle()
+            console.log('%c 调试窗口显示/隐藏', 'color:#000;font-size:20px;font-weight:900;background:#5dbb80');
+        })
+    },1000)
 
-
-
-
-
-    console.log('%c 新版erm-调试窗口显示/隐藏', 'color:#000;font-size:20px;font-weight:900;background:#5d9df8');
+    console.log('%c 新版erm预览页插入代码调试', 'color:#000;font-size:20px;font-weight:900;background:#5dbb80');
 </script>
 
 
 
 <!-- 
 // ==UserScript==
-// @name        新版erm-调试窗口显示/隐藏
+// @name        新版erm-新版erm预览页插入代码调试
 // @author      wangyongjie
 // @namespace   xiaodongxier.com
 // @require     https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js
-// @match       https://prom.m.gome.com.cn/gcms/MobsaleJieCSdown.html
-// @match       https://prom.m.gome.com.cn/gcms/MobsaleJieCSdown.html/*
+// @match       *://prom.m.gome.com.cn/html/prodhtml/topics/*
+// @match       *://cms.ds.gome.com.cn/gome-mobile-web/preview_page/*
 // @grant       none
 // @version     1.0
-// @description 2021/9/13 上午12:06:32
+// @description 2021/9/2 下午7:06:32
 // ==/UserScript==
-$("body").append($("<div id='new-erm-app-css-edit'></div>"))
-$("#new-erm-app-css-edit").load("https://github.xiaodongxier.com/PlugIn/new-erm-app-css-edit.html")
-// $("#new-erm-app-css-edit").load("https://cdn.jsdelivr.net/gh/xiaodongxier/PlugIn@main/new-erm-app-css-edit.html")
-
+$("body").append($("<div id='new-erm-app-page-css-edit'></div>"))
+$("#new-erm-app-page-css-edit").load("https://github.xiaodongxier.com/PlugIn/new-erm-app-page-css-edit.html")
+// $("#new-erm-app-page-css-edit").load("https://cdn.jsdelivr.net/gh/xiaodongxier/PlugIn@main/new-erm-app-page-css-edit.html")
  -->
+
