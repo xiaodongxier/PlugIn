@@ -1,6 +1,6 @@
 <!--
  * @Date: 2021-09-03 09:50:22
- * @LastEditTime: 2021-09-14 10:28:43
+ * @LastEditTime: 2021-09-14 10:35:18
  * @Author: WangYongJie
  * @Work-email: wangyongjie2@gome.com.cn
  * @Private-email: admin@xiaodongxier.com
@@ -10,7 +10,9 @@
 
 /* 成功提示 */
 .el-notification.right {
-    margin-right: 500px !important;
+    /* margin-right: 500px !important; */
+    top: 0;
+    left: 16px !important;
 }
 </style>
 <div class="new-erm-app-edit"></div>
@@ -36,3 +38,20 @@ $("body").append($("<div id='new-erm-app-edit'></div>"))
 $("#new-erm-app-edit").load("https://github.xiaodongxier.com/PlugIn/new-erm-app-edit.html")
 // $("#new-erm-app-edit").load("https://cdn.jsdelivr.net/gh/xiaodongxier/PlugIn@main/new-erm-app-edit.html")
  -->
+
+ <!-- 
+
+    <script>
+     var zdy_css = `
+        <style>
+            .el-notification.right {
+                margin-right: 500px !important;
+    left: 16px !important;
+                transition: 50s;
+            }
+        </style>    
+     `;
+     $("html").append(zdy_css)
+ </script>
+
+  -->
