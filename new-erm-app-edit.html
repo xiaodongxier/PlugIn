@@ -1,23 +1,40 @@
 <!--
  * @Date: 2021-09-03 09:50:22
- * @LastEditTime: 2021-09-14 10:35:18
+ * @LastEditTime: 2021-09-14 11:06:20
  * @Author: WangYongJie
  * @Work-email: wangyongjie2@gome.com.cn
  * @Private-email: admin@xiaodongxier.com
 -->
 <style>
-.el-header {background: #202229;}
+    .el-header {
+        background: #202229;
+    }
 
-/* 成功提示 */
-.el-notification.right {
-    /* margin-right: 500px !important; */
-    top: 0;
-    left: 16px !important;
-}
+    /* 成功提示 */
+
+    .el-notification.right {
+        /* margin-right: 500px !important; */
+        top: 0 !important;
+        left: 16px !important;
+    }
+
+    /* 活动链接 */
+
+    .disble.disble1 {
+        margin-left: 20px;
+    }
+
+    .disble.disble1 a {
+        color: #fff;
+    }
 </style>
 <div class="new-erm-app-edit"></div>
 <script>
-    console.log('%c 新版erm移动端编辑加载成功', 'color:#000;font-size:20px;font-weight:900;background:#5dbb80');
+    var key_dom = $("#pageTitle");
+    var key_con = key_dom.html().replace(/[\ |\~|\`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\-|\_|\+|\=|\||\\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?]/g, "");
+    key_dom.parent("p").after(`<p class="disble disble1"><a href="https://prom.m.gome.com.cn/gcms/${key_con}.html" target="_blank">https://prom.m.gome.com.cn/gcms/${key_con}.html</a></p>`)
+
+    console.log('%c 新版erm移动端编辑加载成功',  'color:#000;font-size:20px;font-weight:900;background:#5dbb80');
 </script>
 
 
@@ -39,7 +56,7 @@ $("#new-erm-app-edit").load("https://github.xiaodongxier.com/PlugIn/new-erm-app-
 // $("#new-erm-app-edit").load("https://cdn.jsdelivr.net/gh/xiaodongxier/PlugIn@main/new-erm-app-edit.html")
  -->
 
- <!-- 
+<!-- 
 
     <script>
      var zdy_css = `

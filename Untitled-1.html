@@ -1,7 +1,18 @@
 <!--
  * @Date: 2021-09-13 11:08:16
- * @LastEditTime: 2021-09-13 11:08:17
+ * @LastEditTime: 2021-09-14 11:05:36
  * @Author: WangYongJie
  * @Work-email: wangyongjie2@gome.com.cn
  * @Private-email: admin@xiaodongxier.com
 -->
+<script>
+  var key_dom = $("#pageTitle");
+  var key_con = key_dom.html().replace(/[\ |\~|\`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\-|\_|\+|\=|\||\\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?]/g,"");
+  key_dom.parent("p").after(`<p class="disble" style="margin-left: 20px;" ><a style="color:#fff" href="https://prom.m.gome.com.cn/gcms/${key_con}.html" target="_blank">https://prom.m.gome.com.cn/gcms/${key_con}.html</a></p>`)
+</script>
+
+<script>
+
+  var str="jfkldsjalk,.23@#!$$k~!  @#$%^&*()(_+-=|\{}[]';:,./<>??gg  g~```gf"; 
+  str=str.replace(/[\ |\~|\`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\-|\_|\+|\=|\||\\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?]/g,""); 
+</script>
